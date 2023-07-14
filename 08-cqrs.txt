@@ -1,0 +1,89 @@
+CQRS(Command Query Responsibility segregation)
+
+1. Separar la responsabilidad de lecturas de la de escrituras
+
+Sistema monolitico
+
+    Pizza
+    Ingredients
+    Pizza-Ingredient(N:M)
+
+    SELECT
+        FROM Pizza  JOIN PIZZA_INGREDIENT
+            JOIN Ingredient
+
+1. Cada microservicio debería tener una sola bb.dd
+
+    Micro Pizzas
+    {
+        id
+        name(index)
+        description
+        url
+        Ingredient:[id,id,id]
+    }
+
+    Micro Ingredients
+    {
+        id
+        name
+        price
+    }
+Crear, AddIngredient, RemoveIngredient, Update
+
+Pizzas->Ingreients
+
+api-rest,grpc
+
+https://grpc.io/
+
+Select
+
+Micro-Lectura->Evento de integracion(asincronos)
+
+NOSQL Micro Query Pizzas
+
+{
+    id
+    name
+    descriptiom
+    url
+    price
+    ingredient:[id,name]
+}
+
+1. Los datos no están actualizados
+
+DDD
+Broker(Kafka,RabitMq)
+Eventos
+    Sinconos
+    Asincronos
+Outbux Inbox
+Composite pattern
+Event sourcing
+Cqrs
+Saga
+
+{
+    id
+    timestamp
+    type
+    type agregado
+    id agregado(index)
+    user
+    body:{}
+}
+
+id,name
+
+Event sourcing
+                        
+1   01  create  person  1   x   {id:1,name:'PEDRO'}
+2   02  Update  person  1   y   {name:'pedro hurtado'}
+3   03  Update  person  1   y   {name:'pedro hurtado candel'}
+
+insert into
+
+select * from events where id_agregado=1
+order by timestamp

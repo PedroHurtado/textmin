@@ -1,0 +1,25 @@
+var a = 1;
+
+1. solamente lo puedo utilizar en las variables locales de un metodo
+
+    //error
+    class Foo{
+        var a =1
+    }
+
+    class Foo{
+        public void get(){
+            var a =1;
+            a="Hola"; //error
+        }
+    }
+
+2. List<List<string>> list = new ArrayList<>();
+
+    for(List<s>:list){
+
+    }
+
+    for(var value:list){
+
+    }

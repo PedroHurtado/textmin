@@ -1,0 +1,27 @@
+https://projectreactor.io/
+
+
+Mono->Entidad Simple   Mono<Foo>
+Flux->Lista entidades  Flux<Foo>
+
+A.Controlador
+B.Appliation
+C.Infraestructura
+
+A->B->C
+
+Foo Mono<Foo> Foo->Se pierda 
+Mono<Foo> Mono<Foo> Mono<Foo>
+
+
+Microservicio Pizzas-> MicroServicio de ingredients
+
+https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html
+//Bloqueante
+server->server(rest)
+
+
+
+https://docs.spring.io/spring-framework/reference/web/webflux-webclient.html)
+//No bloqueante
+server->server(rest)

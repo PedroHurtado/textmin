@@ -1,0 +1,33 @@
+1. Gateway
+    /pizzas
+    https://spring.io/projects/spring-cloud-gateway
+
+    1. Validar->Identity Service
+    2. Logger
+    3. Timeout
+    4. Facturacion
+
+    Balanceador de cargo
+
+2. Service Register
+    Pizza->192.168.01.01,02,03    
+    https://spring.io/guides/gs/service-registration-and-discovery/
+3. Service Discovery
+
+4. Circuit breaker
+    open->no ok
+    close->ok
+    open half->close
+    
+    https://spring.io/projects/spring-cloud-circuitbreaker
+
+5. Service Mesh
+    Servicio->Servicio
+
+    80
+    27025->proxi->80
+
+https://istio.io/latest/about/service-mesh/
+
+Cloud function
+https://docs.spring.io/spring-cloud-function/docs/current/reference/html/spring-cloud-function.html

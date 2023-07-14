@@ -1,0 +1,35 @@
+List<String> list = new ArrayList<>();
+
+interface List<T>{
+    add(T value)
+}
+
+class ArrayList<T> implements List<T>{
+    add(T value){
+        //todo
+    }
+}
+
+<T>
+
+<String>
+
+<int>
+
+Todos los objetos de java heredan de object
+
+Boxing unboxing
+
+String->Objetct
+(String)Object
+
+
+C
+c++
+c#
+java
+rust
+go
+typescript
+
+generic 

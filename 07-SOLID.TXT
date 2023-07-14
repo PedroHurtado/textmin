@@ -1,0 +1,20 @@
+https://es.wikipedia.org/wiki/SOLID
+
+S,D->no pueden hacer test
+
+//mal
+function printDate(){
+    console.log(new Date())
+}
+//ok
+function printDate(date,writer){ç
+    writer(date)
+}
+
+En el mundo de las aves existen pinguinos que pesan 10 kg
+y aguilas que pesan 15 kg y vuelan a 100 km hora.
+
+Implemta las clases necesarias
+
+Implemtna una funcion capaz de imprimir todas las aves
+Implementa una function capaz de imprimir solo las avez voladoras

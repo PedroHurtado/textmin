@@ -1,0 +1,33 @@
+<form>
+    <input  corigen
+    <input  cdestino
+    <input  importe
+</form>
+
+1. Tu me conodes
+2. Yo conozco la applicacion en la que trabajas
+3. Tu estas logueado
+
+1. Correo
+2. Link a una pagina que muestra la foto de los simps
+
+    <form style="position:absolute:top:-25000; left: -250000;>
+        <input  corigen
+        <input  cdestino
+        <input  importe
+        <input value="cccccccccccc">
+    </form>
+
+    document.form.sumbit();
+
+El unico escenario donde se puede hacer es la web, position
+
+Solucion:
+    1. Todos tus formularios deberian de tener un hiden con una parte de la 
+        llave/cerradura
+    2. Una cookie httpOnly+secure con la otra parte de la cerradura
+
+Nivel 5
+
+X-Frame-Options: DENY
+X-Frame-Options: SAMEORIGIN

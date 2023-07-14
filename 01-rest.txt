@@ -1,0 +1,103 @@
+¿Cual es la principal caractesistica del protocolo http?
+
+
+Es un protocolo sin estado
+
+Request
+    url
+Response
+    status code
+
+pizza={
+    id,
+    name,
+    description,
+    price, (SUM(COSTE INGREDIENTES))*1.20
+    url,
+    ingredients:[{id,name}]
+}
+
+//crud
+
+1. http://localhost:8080
+
+Url
+
+path:/pizzzas
+
+1. No debe de expresar acciones
+2. No debe de expresar formatos(xml|json) .json .xml
+3. Versionado /v1/
+        /pizzas
+        /v1/pizzas
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+create
+
+path        verbo           Request             Response    ok        error
+/pizzas     POST            {name,etc}          {id,price}  201       400|409
+                                                                      500
+                                                                      401
+                                                                      403
+400,409,500
+{
+    attributo:'el nombre es requerido'
+} 
+{
+    action:{5,3}
+} 
+
+update
+path             verbo           Request             Response    ok        error
+/pizzas/{id}     PUT|PATCH       {name,etc}          {id,price}  200|204    400|409
+                                                     EMPTY                  500
+                                                                            401
+                                                                            403|404
+                                                                            404
+PUT VS PATCH
+{name:'pedro hurtado', oldname:'pedro'}
+
+IDEMPOTENTES Y NO IDEMPOTENTES
+
+get             POST
+PUT             PATCH
+delete
+
+
+update
+path             verbo           Request             Response    ok        error
+/pizzas/{id}     DELETE                                         204         400|409
+                                                     EMPTY                  500
+                                                                            401
+                                                                            403|404
+                                                                            404
+
+
+lectura
+path             verbo           Request             Response    ok        error
+1. Recuperar un solo registro
+/pizzas/{id}     GET                                 {}          200        400|409
+                                                                            500
+                                                                            401
+                                                                            403|404
+                                                                            404
+
+1. Recuperar un solo registro
+/pizzas          GET                                 [{}]          200          400|409
+                                                                                500
+                                                                                401
+                                                                                403                                                                            
+
+QueryString
+
+/pizzas?name=car&page=1&size=25&attr=id,name
+
+
+SELECT ID,NAME,PRICE,URL FROM PIZZAS
+SELECT * FROM PIZZAS
+
+headers
+
+'content-type':'application/json'
+'accept':'application/json'|'application/xml'

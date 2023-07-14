@@ -1,0 +1,66 @@
+login
+    user
+    pwd
+1. El protocolo http no tiene estado¿Que hago yo para saber quien eres?
+
+    Cookie
+    token
+
+1. Cookie -> dsadfsdfdafdsaffd  
+    Secure->https
+    HttpOnly
+
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
+
+    ¿En que entornos(web,mobile,server-server) debo de utilizarlas?
+
+    Web
+
+2. Token
+
+    {
+        token:xxxxx.yyyyy.zzzzz,
+        type:bearer,
+        refresh_token: fasdfadsfadsffasdfafafasdaf
+    }
+
+    Autorizathion: bearer xxxx.yyyyy.zzzz
+
+    1. El token debe de tener una vida util muy corta 3600s
+    2. refresh_token
+    3. Si tengo token y refresh_token 401
+
+
+    1. Token de cliente
+        JWT(NO COMPROBACION)
+    2. token de servidor
+
+    JWT
+
+    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+    eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.
+    SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+    Secret
+
+    Web
+    mobile
+    server-server
+
+3. ¿Donde guardarias el token?->web
+
+    LocalStorage
+    SesionStorage
+
+        1. Tienes que serializar a json y deserializar
+        2. Es sincrono
+        3. No es accesible desde los worker
+    IndexDb
+        1. No serializas
+        2. Es asincrono
+        3. Es accesible desde los worker
+
+
+Xss->CODIGO JS MALICIOSA->
+
+    https://www.w3.org/TR/CSP3/

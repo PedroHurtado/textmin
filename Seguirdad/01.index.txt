@@ -1,0 +1,9 @@
+Autentico
+
+Web
+
+    XSS->CSP(Content Security Policy)
+    CSRF
+    CORS
+
+OAUTH

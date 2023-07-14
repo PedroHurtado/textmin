@@ -1,0 +1,64 @@
+1. Proveedor de identidad (IdP)
+
+    Google,Facebook,Microsot,etc..
+
+1.1 Registrar la applicacion
+    Nombre de applicacion
+    resumen
+    *redirect_uri"
+    *url
+
+    8-horas
+
+    client_id
+    client_secrest
+1.2
+    Dibujo un formularios
+
+    <form action="/login/github" mehtod:'POST'>
+        <button type="sumbit></button>
+    </form>
+1.3 Servidor va a recibir un post
+    1.3.1 Redirect a el identity provider
+        https://github.com/login/oauth/authorize
+
+        client_id
+        redirect_uri
+        scope
+
+    1. El usuario no está autenticado->login(user:pwd)
+    2. No haya aceptado los scopes
+
+1.4 IdP->redirect->redirect_uri
+    code
+    
+1.5 Llamada server->server    (Post)
+    
+    https://github.com/login/oauth/access_token
+    code
+    client_id
+    client_secrect
+    scopes
+    redirect_uri
+1.6 github-response
+    Accept: application/json
+    {
+        "access_token":"gho_16C7e42F292c6912E7710c838347Ae178B4a",
+        "scope":"repo,gist",
+        "token_type":"bearer"
+    }
+1.7. Seria llamar a la api de github/users
+
+        firstName
+        lastname
+        email
+        avatar
+        
+1.8
+    Será guardarlo en una bb.donde
+        provider:propio|github|google|
+        
+        Cookie
+        Token
+    
+

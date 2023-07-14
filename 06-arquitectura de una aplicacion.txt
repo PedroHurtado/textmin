@@ -1,0 +1,34 @@
+DDD(Domain drive designer)
+
+El negocio de una application reside en un solo punto->domain
+
+domain->
+    entities
+            es una clase que es igual a otra si su identifacador es igual
+            identiy pattern
+    valueobject
+            es una clase que es igual a otra si todos sus atributos son iguales
+    eventos del dominio
+            clase no debe de exponer ningun metodo no void(commandos)
+            pizza
+            ingredient->evento->modificar las pizzas
+    exception del domain
+
+    service
+
+    interfaz del repositorio(I de SOLID)
+    {
+        add
+        update
+        remove
+        get
+        getAll
+    }
+
+    1. No debe de estar invadido por ningún framework
+    2. Todos los metodos de las entidades deben de ser commandos
+    3. Agregado
+            Entidad:pizza(Agregado)->Eventos->Relacion pizza+ingredient
+                    ingredient(Agregado)
+
+    4. Nuestro dominio debería estar cubierto al 100 % por test unitarios.

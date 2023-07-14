@@ -1,0 +1,51 @@
+object relational mapping
+
+Hibernate->JPA(Relational)
+
+Mapper
+
+    1:N
+    1:1(null)
+    N:M
+
+Ingredient:
+    Pizza->1:N
+
+FormaPago.Facturas(propiedades de navegacion)
+
+Repository
+{
+    add
+    Update
+    remove
+    get(traking)
+    query
+}
+
+UOW(Unidad de trabajo) .save() y limpiar Traking
+
+1. Lectura proxi->Traking
+    
+    x pending
+
+    x.name = "Hello"
+    x update
+
+    y add
+
+    z remove
+
+try{
+    //open connection
+    //begin transaction
+        //instructiones insert,update,delete
+    //commit transaction
+}
+catch{
+    //roolback transaction
+}
+finally{
+    //close connection
+}
+
+@Taransional
